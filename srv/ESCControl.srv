@@ -1,0 +1,9 @@
+float32 rollPercentage
+float32 pitchPercentage
+float32 yawPercentage
+float32 thrustPercentage
+---
+uint16 frontLeftPW
+uint16 frontRightPW
+uint16 backLeftPW
+uint16 backRightPW
