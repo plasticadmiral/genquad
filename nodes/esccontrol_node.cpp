@@ -40,6 +40,7 @@ int main(int argc, char* argv[])
 {
 
     int FL, FR, BL, BR, TMa, TMi, ARP, AY;
+    /*
     if(argc != 9)
     {
         std::cout<<"[ERROR]: Please enter all the arguements in the order,"<<std::endl;
@@ -47,7 +48,7 @@ int main(int argc, char* argv[])
         std::cout<<"         AggrRP > AggrY, ThrottleMin & ThrottleMax in between 700 & 2000"<<std::endl;
         return 1;
     }
-
+    */
 
     FL  = atoi(argv[1]);
     FR  = atoi(argv[2]);

@@ -191,11 +191,11 @@ add_library(libmpu9250 src/mpu9250.h src/mpu9250.cpp)
 add_library(libesccontrol src/esccontrol.h src/esccontrol.cpp)
 
 
-target_link_libraries(libbmp280 ${pigpiod_if2_LIBRARY})
+target_link_libraries(libbmp2801 ${pigpiod_if2_LIBRARY})
 target_link_libraries(libmpu9250 ${pigpiod_if2_LIBRARY})
 target_link_libraries(libesccontrol ${pigpiod_if2_LIBRARY})
 
-set_target_properties(libbmp280
+set_target_properties(libbmp2801
     PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY
     ${PROJECT_SOURCE_DIR}/plugins
@@ -250,9 +250,9 @@ add_dependencies(esccontrol_node genquad_generate_messages_cpp)
 # )
 
 target_link_libraries(dummy_node ${catkin_LIBRARIES})
-target_link_libraries(bmp280_node bmp2801 ${catkin_LIBRARIES})
-target_link_libraries(mpu9250_node mpu9250 ${catkin_LIBRARIES})
-target_link_libraries(esccontrol_node esccontrol ${catkin_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(bmp280_node libbmp2801 ${catkin_LIBRARIES})
+target_link_libraries(mpu9250_node libmpu9250 ${catkin_LIBRARIES})
+target_link_libraries(esccontrol_node libesccontrol ${catkin_LIBRARIES} ${Boost_LIBRARIES})
 
 set_target_properties(dummy_node
     PROPERTIES

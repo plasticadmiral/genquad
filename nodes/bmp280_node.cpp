@@ -30,6 +30,7 @@ int main(int argc, char* argv[])
     instance.getST();
     instance.setPowerMode(BMP280_NORMAL_MODE);
 
+    /*
     if(argc != 5)
     {
         std::cout<<"[ERROR]: Please enter all the arguements in the order,"<<std::endl;
@@ -37,7 +38,7 @@ int main(int argc, char* argv[])
         std::cout<<"         (1, 2, 4, 8, 16) (5, 63, 125, 250, 500, 1000, 2000, 4000) (keep filter off for now '0')"<<std::endl;
         return 1;
     }
-
+    */
     switch (atoi(argv[1]))
     {
     case 1:
